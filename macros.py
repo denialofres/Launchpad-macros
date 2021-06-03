@@ -11,25 +11,22 @@ for i in range(8):
 for i in range(64):
 	lp.change_led(TargetRegion.GRID, i, Brightness.OFF, Brightness.OFF)
 
-
 def _process_press(index: int, key: str):
 	keyboard.press(key)
 
 def _process_release(index: int, key: str):
 	keyboard.release(key)
 
-
 def key_press(target: TargetRegion, index: int, char: str):
 	lp.on_press(target, index, lambda: _process_press(index, char))
 	lp.on_release(target, index, lambda: _process_release(index, char))
-
 
 def read():
 	with open("/Users/promandan/Onedrive/Code/Launchpad macros/macros.json", "r+") as file:
 		keybinds = json.load(file)
 		return {int(k): v for k, v  in keybinds["grid_keybinds"].items()}, {int(k): v for k, v  in keybinds["row_keybinds"].items()}, {int(k): v for k, v  in keybinds["column_keybinds"].items()}
 
-print("\nProcesses defined\n")
+print("Processes defined")
 
 if __name__ == "__main__":
 
@@ -46,7 +43,7 @@ if __name__ == "__main__":
 
 	for k, v in column_keybinds.items():
 		key_press(TargetRegion.COMMAND_COLUMN, k, v)
-		lp.change_led(TargetRegion.COMMAND_COLUMN, k, Brightness.OFF, Brightness.HIGH)	
+		lp.change_led(TargetRegion.COMMAND_COLUMN, k, Brightness.OFF, Brightness.HIGH)
 
-	print("Running central process\n\n")
+	print("Running central process")
 	lp.run()
