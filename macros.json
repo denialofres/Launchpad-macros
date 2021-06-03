@@ -3,7 +3,7 @@
 	{"6": "cmd+w", "7": "cmd+t",
 		"14": "cmd+s", "15": "f14",
 		"22": "cmd+o", "23": "cmd+r",
-		"45": "cmd+k+b","46": "cmd+shift+9", "47": "cmd+shift+8",
+		"44": "cmd+shift+f4", "45": "cmd+k+b","46": "cmd+shift+9", "47": "cmd+shift+8",
 		"52":"shift+cmd+J","53":"shift+cmd+K","54": "cmd+shift+t", "55": "shift+cmd+X",
 		"60": "cmd+f4", "61": "cmd+k+j", "62": "cmd+k+2", "63":"cmd+k+1"},
  	"column_keybinds": {},
