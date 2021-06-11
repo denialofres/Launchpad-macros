@@ -1,6 +1,6 @@
 {
 	"grid_keybinds":
-	{"0":"t,e,s,t", "6": "cmd+w", "7": "cmd+t",
+	{"0":"cmd+shift+M", "6": "cmd+w", "7": "cmd+t",
 		"14": "cmd+s", "15": "f14",
 		"22": "cmd+o", "23": "cmd+r",
 		"44": "cmd+shift+f4", "45": "cmd+k+b","46": "cmd+shift+9", "47": "cmd+shift+8",
