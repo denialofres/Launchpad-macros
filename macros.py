@@ -2,7 +2,7 @@ from macros_wrapper import Launchpad, get_input_port_names, get_output_port_name
 import keyboard, json, os
 
 os.system("clear")
-
+print("macros.py - running launchpad macros program")
 lp = Launchpad("Launchpad Mini", "Launchpad Mini")
 for i in range(8):
 	lp.change_led(TargetRegion.COMMAND_ROW, i, Brightness.OFF, Brightness.OFF)
@@ -25,8 +25,6 @@ def read():
 	with open("/Users/promandan/Onedrive/Code/Launchpad macros/macros.json", "r+") as file:
 		keybinds = json.load(file)
 		return {int(k): v for k, v  in keybinds["grid_keybinds"].items()}, {int(k): v for k, v  in keybinds["row_keybinds"].items()}, {int(k): v for k, v  in keybinds["column_keybinds"].items()}
-
-print("Processes defined")
 
 if __name__ == "__main__":
 
